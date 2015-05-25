@@ -1,0 +1,10 @@
+- @restaurants.each do |restaurant|
+	div.col-sm-6.col-md-4
+		.thumbnail
+			= image_tag restaurant.avatar.url(:medium), class: 'img-thumbnail'
+			.caption
+				h3= restaurant.name
+				p
+					= link_to t('restaurant.show'), restaurant_path(restaurant), class: 'btn btn-default'
+					= link_to t('restaurant.edit'), edit_restaurant_path(restaurant), class: 'btn btn-info'
+					= link_to t('restaurant.destroy'), restaurant_path(restaurant), method: :delete, class: 'btn btn-danger'

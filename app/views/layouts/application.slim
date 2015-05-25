@@ -1,0 +1,23 @@
+doctype 5
+html
+  head
+    title= t('landing.title')
+    = stylesheet_link_tag 'application', media: 'all', data: { 'turbolinks-track' => true }
+    = csrf_meta_tags
+  body
+    nav.navbar.navbar-default
+     div.container-fluid
+        div.navbar-header
+          = link_to t('landing.title'), root_path, class: :'navbar-brand'
+        .collapse.navbar-collapse#bs-example-navbar-collapse-1
+          ul.nav.navbar-nav.navbar-right
+            - if user_signed_in?
+              li
+                = link_to current_user.email, 'javascript:void(0)'
+              li
+                = link_to 'Logout', destroy_user_session_path
+    = render partial: 'shared/flash'
+    .row
+      = yield
+
+    = javascript_include_tag 'application', data: { 'turbolinks-track' => true }

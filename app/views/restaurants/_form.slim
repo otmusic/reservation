@@ -1,0 +1,9 @@
+.col-md-4.col-md-offset-4.text-center
+	= form_for @restaurant, html: { class: 'form-horizontal' } do |f|
+		.form-group
+			= f.text_field :name, placeholder: 'Restaurant name', class: 'form-control'
+		.form-group
+			label Choose a restaurant photo
+			= f.file_field :avatar
+		.form-group
+			= f.submit 'Create', class: 'btn btn-info'

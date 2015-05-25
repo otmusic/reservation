@@ -1,0 +1,28 @@
+en:
+  landing:
+    title: 'Restaurant Reservation'
+  restaurant:
+    create: 'Create Restaurant'
+    show: 'show'
+    edit: 'edit'
+    create_message: 'Restaurant successfuly created'
+    update_message: 'Restaurant successfuly updated'
+    remove_message: 'Restaurant successfuly removed'
+  table:
+    create: 'Create table'
+    edit: 'Edit'
+    destroy: 'Remove'
+    create_message: 'Table successfuly created'
+    update_message: 'Table successfuly updated'
+    remove_message: 'Table successfuly removed'
+  reservation:
+    title: 'Tables reservation'
+    not_reserved_date: 'Table not reserved'
+    reserved: 'reserved'
+    not_reserved: 'not reserved'
+    edit: 'edit reservation'
+    reserv_button: 'reserv'
+    destroy: 'remove reservation'
+    create_message: 'Table successfuly reserved'
+    update_message: 'Table reserveation successfuly updated'
+    remove_message: 'Table reserveation successfuly removed'

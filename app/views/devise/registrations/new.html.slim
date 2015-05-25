@@ -1,0 +1,13 @@
+.col-md-4.col-md-offset-4
+	h2.text-center
+		| Sign up
+	= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: 'form-horizontal' }) do |f|
+		.form-group
+			= f.email_field :email, required: false, autofocus: true, placeholder: 'Email', class: 'form-control'
+		.form-group
+			= f.password_field :password, required: false, placeholder: 'Password', class: 'form-control'
+		.form-group
+			= f.password_field :password_confirmation, required: true, placeholder: 'Confirm Password', class: 'form-control'
+		.form-group
+			= f.submit 'Sign up', class: 'btn btn-info'
+	= render "devise/shared/links"

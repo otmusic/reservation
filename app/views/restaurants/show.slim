@@ -1,0 +1,18 @@
+.col-md-6.col-md-offset-3.text-center
+	= link_to t('table.create'), new_restaurant_table_path(@restaurant), class: 'btn btn-primary btn-lg'
+
+	h2= @restaurant.name
+	div.row
+		h2= t('reservation.title')
+		- @restaurant.tables.decorate.each do |table|
+			div.col-sm-7.col-md-4
+				p
+					= link_to t('table.edit'), edit_restaurant_table_path(@restaurant.id, table.id), class: 'btn btn-primary btn-sm'
+					= link_to t('table.destroy'), restaurant_table_path(@restaurant.id, table.id), method: :delete, class: 'btn btn-danger btn-sm'
+				= table.reservation_status
+				p Table ##{table.number}
+				.caption
+					span Name - #{table.name}
+					p= table.date_reservation
+					p
+						= table.reservation_btn
